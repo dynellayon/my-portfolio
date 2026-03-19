@@ -40,11 +40,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden"
+      id="hero"
+    >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <img
-          src="/dot-bg.jpg"
+          src={`${import.meta.env.BASE_URL}dot-bg.jpg`}
           alt="Background"
           className="w-full h-full object-cover opacity-40"
         />
@@ -93,12 +96,15 @@ export default function Hero() {
 
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
-              <a href="/#contact">
+              <a href={`${import.meta.env.BASE_URL}/#contact`}>
                 <Button size="lg">
                   Contact Me <ArrowRight className="w-5 h-5 ml-1" />
                 </Button>
               </a>
-              <a href="/DynellAyon_CV.pdf" download>
+              <a
+                href={`${import.meta.env.BASE_URL}/DynellAyon_CV.pdf`}
+                download
+              >
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5 mr-1" />
                   Download CV
@@ -131,7 +137,7 @@ export default function Hero() {
 
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/gradpic.jpg"
+                  src={`${import.meta.env.BASE_URL}gradpic.jpg`}
                   alt="Dynell Ayon"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
@@ -151,7 +157,7 @@ export default function Hero() {
         </div>
 
         {/* Skills marquee */}
-        <div className="mt-20">
+        <div className="mt-20 bo">
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>
@@ -174,14 +180,19 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <a
-          href="#about"
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50">
+        <button
+          onClick={() => {
+            const el = document.getElementById("about");
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
-        </a>
+        </button>
       </div>
     </section>
   );

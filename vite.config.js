@@ -10,8 +10,7 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/my-portfolio/", // 👈 VERY IMPORTANT
-  // Now you can use __dirname
+  base: "/my-portfolio/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -27,7 +27,10 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
+    <section
+      id="experience"
+      className="py-32 scroll-mt-32 relative overflow-hidden"
+    >
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">

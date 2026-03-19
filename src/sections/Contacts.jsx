@@ -81,7 +81,7 @@ export default function Contacts() {
   };
 
   return (
-    <section id="contact" className="py-32 relative">
+    <section id="contact" className="py-32 scroll-mt-32 relative">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-20">

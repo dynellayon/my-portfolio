@@ -59,7 +59,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <a href="/#contact">
+          <a href="#contact">
             <Button size="sm">Hire Me</Button>
           </a>
         </div>
@@ -87,7 +87,9 @@ export default function Navbar() {
                 </a>
               ))}
 
-              <Button onClick={closeMenu}>Hire Me</Button>
+              <a href="#contact" onClick={closeMenu}>
+                <Button>Hire Me</Button>
+              </a>
             </div>
           </div>
         )}
