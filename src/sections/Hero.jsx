@@ -102,7 +102,7 @@ export default function Hero() {
                 </Button>
               </a>
               <a
-                href={`${import.meta.env.BASE_URL}/DynellAyon_CV.pdf`}
+                href={`${import.meta.env.BASE_URL}/Dynell-Ayon-Resume.pdf`}
                 download
               >
                 <AnimatedBorderButton>

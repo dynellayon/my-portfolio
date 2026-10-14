@@ -23,6 +23,13 @@ const experiences = [
     description: "Developed websites for multiple city departments.",
     technologies: ["React", "Laravel", "Redux"],
   },
+  {
+    period: "Aug 2026 – Present",
+    role: "Computer Programmer I/Computer Operator I",
+    company: "University of Science and Technology of Southern Philippines",
+    description: "Developed and maintained university systems and applications .",
+    technologies: ["React", "Laravel", "Redux", "Tailwind CSS","Python"],
+  },
 ];
 
 export default function Experience() {
